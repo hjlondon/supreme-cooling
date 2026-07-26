@@ -27,7 +27,14 @@ export default function HomePage() {
       {/* Hero — the page's one ink band, photographic with a scrim */}
       <section className="page-header page-header--hero page-header--photo">
         <div className="page-header__media">
-          <img src="/assets/vanhero.png" alt="Supreme Cooling Services van on site" />
+          <video
+            src="/assets/hvac-intro.mp4"
+            autoPlay
+            muted
+            loop
+            playsInline
+            aria-hidden="true"
+          />
         </div>
         <div className="container page-header__inner reveal">
           <span className="badge badge--inverse">
