@@ -15,6 +15,8 @@ import {
   STATS,
   FEATURES,
   FAQS,
+  RESIDENTIAL,
+  TESTIMONIALS,
   PHONE_DISPLAY,
   PHONE_HREF,
 } from '@/lib/content'
@@ -32,10 +34,11 @@ export default function HomePage() {
             <Icon name="award" size={14} />
             Mitsubishi Heavy Industries Diamond Dealer
           </span>
-          <h1>Commercial Air Conditioning Specialists</h1>
+          <h1>Air Conditioning Specialists for Your Business or Home</h1>
           <p className="lede">
-            Installation, servicing, and repairs across London. NVQ qualified,
-            F-Gas certified engineers with 20+ years of combined industry
+            Installation, servicing, and repairs for commercial and
+            residential properties across London. NVQ qualified, F-Gas
+            certified engineers with 20+ years of combined industry
             experience — reachable 24/7 when it matters most.
           </p>
           <div className="page-header__actions">
@@ -83,8 +86,28 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* For Your Home — residential path, addressed early and directly */}
+      <section id="home-comfort" className="section">
+        <div className="container grid-2">
+          <div>
+            <SectionHeading
+              eyebrow={RESIDENTIAL.eyebrow}
+              title={RESIDENTIAL.title}
+              lede={RESIDENTIAL.lede}
+            />
+            <CheckList items={RESIDENTIAL.points} />
+            <div style={{ marginTop: 'var(--space-6)' }}>
+              <Button href="/contact" icon="arrow-right">
+                Contact Us
+              </Button>
+            </div>
+          </div>
+          <Media ratio="4x3" label="Home air conditioning photo" />
+        </div>
+      </section>
+
       {/* Who do we work with */}
-      <section className="section">
+      <section className="section section--subtle">
         <div className="container grid-2">
           <div>
             <SectionHeading
@@ -99,7 +122,7 @@ export default function HomePage() {
       </section>
 
       {/* Why choose us */}
-      <section className="section section--subtle">
+      <section className="section">
         <div className="container">
           <SectionHeading
             eyebrow="Why Choose Us"
@@ -113,19 +136,19 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Testimonial */}
-      <section className="section">
-        <div className="container" style={{ maxWidth: 'var(--prose-max)' }}>
-          <Testimonial
-            quote="Supreme Cooling fitted out our office floor with minimal disruption and handed over on schedule. The maintenance visits since have been just as reliable."
-            name="Facilities Manager"
-            detail="Commercial office fit-out, Central London"
-          />
+      {/* Testimonials — commercial and residential, side by side */}
+      <section className="section section--subtle">
+        <div className="container">
+          <div className="grid-2" style={{ alignItems: 'start' }}>
+            {TESTIMONIALS.map((t) => (
+              <Testimonial key={t.name + t.detail} quote={t.quote} name={t.name} detail={t.detail} />
+            ))}
+          </div>
         </div>
       </section>
 
       {/* FAQ */}
-      <section className="section section--subtle">
+      <section className="section">
         <div className="container" style={{ maxWidth: 'var(--prose-max)' }}>
           <SectionHeading
             eyebrow="FAQs"
@@ -137,7 +160,7 @@ export default function HomePage() {
       </section>
 
       {/* CTA */}
-      <section className="section">
+      <section className="section section--subtle">
         <div className="container">
           <CTABanner />
         </div>
