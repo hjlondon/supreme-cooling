@@ -1,0 +1,45 @@
+/* ============================================================
+   Typography tokens
+   Chakra Petch — display (headings, wordmark-adjacent). Substitution.
+   Barlow — body. IBM Plex Mono — spec data only.
+   Font families are provided by next/font as CSS variables
+   (--font-display, --font-body, --font-mono) on <html>.
+   ============================================================ */
+
+:root {
+  --font-stack-display: var(--font-display), 'Chakra Petch', system-ui, sans-serif;
+  --font-stack-body: var(--font-body), 'Barlow', system-ui, sans-serif;
+  --font-stack-mono: var(--font-mono), 'IBM Plex Mono', ui-monospace, monospace;
+
+  /* Weights — headings are Semibold 600; 700 is reserved for the
+     wordmark and stat numerals */
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  /* Type scale */
+  --text-xs: 0.75rem;    /* 12px — micro-type, badges */
+  --text-sm: 0.875rem;   /* 14px — captions, labels */
+  --text-base: 1rem;     /* 16px — body */
+  --text-lede: 1.125rem; /* 18px — ledes */
+  --text-h4: 1.1875rem;  /* 19px */
+  --text-h3: 1.375rem;   /* 22px */
+  --text-h2: clamp(1.75rem, 1.4rem + 1.4vw, 2.25rem);   /* 28–36px */
+  --text-h1: clamp(2.125rem, 1.6rem + 2.2vw, 3rem);      /* 34–48px */
+  --text-stat: clamp(2rem, 1.6rem + 1.6vw, 2.75rem);
+
+  /* Line heights */
+  --lh-heading: 1.25;
+  --lh-body: 1.6;
+  --lh-tight: 1.1;
+
+  /* Letter-spacing */
+  --tracking-eyebrow: 0.14em; /* uppercase eyebrows, stat labels */
+  --tracking-button: 0.06em;  /* uppercase button labels */
+  --tracking-wordmark: 0.16em; /* only for type imitating the lockup */
+
+  /* Measures */
+  --measure-body: 66ch;
+  --measure-prose: 760px;
+}

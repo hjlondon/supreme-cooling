@@ -1,0 +1,91 @@
+/* ============================================================
+   Supreme Cooling Services — colour tokens
+   Ink: cool-tinted neutral ramp derived from the logo charcoal
+   (#2F2F2F preserved exactly as --ink-700).
+   Chill: mid-deep cyan-blue accent — moving air, the brand colour.
+   Heat: single warm counterpoint — heating, urgency, star ratings.
+   Never a call-to-action.
+   ============================================================ */
+
+:root {
+  /* Ink ramp — cool-tinted neutrals */
+  --ink-950: #14171a;
+  --ink-900: #1b1f23;
+  --ink-800: #24282c;
+  --ink-700: #2f2f2f; /* logo charcoal, preserved exactly */
+  --ink-600: #43494e;
+  --ink-500: #5b6369;
+  --ink-400: #7a8288;
+  --ink-300: #9ba3a9;
+  --ink-200: #c3c9cd;
+  --ink-100: #dfe3e6;
+  --ink-50:  #f2f5f6;
+
+  /* Chill ramp — cyan-blue accent */
+  --chill-900: #063b52;
+  --chill-800: #085a7c;
+  --chill-700: #0a6a92;
+  --chill-600: #0c7aa8; /* actions */
+  --chill-500: #0e96cc; /* accents and rules */
+  --chill-400: #3fadd8;
+  --chill-300: #79c6e4;
+  --chill-200: #b3def0;
+  --chill-100: #d9eef7;
+  --chill-50:  #eef7fb;
+
+  /* Heat — warm counterpoint, once per page at most */
+  --heat-600: #c26c1b;
+  --heat-500: #e08127;
+  --heat-100: #faeadb;
+
+  /* Status */
+  --status-success: #1e7d4f;
+  --status-warning: #b97a10;
+  --status-danger:  #b3372d;
+
+  /* Semantic surfaces */
+  --surface-page: #ffffff;
+  --surface-subtle: #f2f5f6;
+  --surface-inverse: var(--ink-900);
+  --surface-inverse-raised: var(--ink-800);
+  --surface-accent-soft: var(--chill-100);
+
+  /* Semantic text */
+  --text-primary: var(--ink-800);
+  --text-secondary: var(--ink-500);
+  --text-inverse: #ffffff;
+  --text-inverse-secondary: rgba(255, 255, 255, 0.72);
+  --text-link: var(--chill-700);
+  --text-link-hover: var(--chill-500);
+
+  /* Borders */
+  --border-subtle: var(--ink-100);
+  --border-default: var(--ink-200);
+  --border-strong: var(--ink-300);
+  --border-inverse: rgba(255, 255, 255, 0.14);
+
+  /* White-alpha fills on ink surfaces */
+  --fill-inverse-input: rgba(255, 255, 255, 0.06);
+  --fill-inverse-raised: rgba(255, 255, 255, 0.12);
+
+  /* Photographic protection scrims — never a solid capsule */
+  --scrim-hero: linear-gradient(
+    to right,
+    rgba(20, 23, 26, 0.82) 0%,
+    rgba(20, 23, 26, 0.55) 55%,
+    rgba(20, 23, 26, 0.25) 100%
+  );
+  --scrim-bottom: linear-gradient(
+    to top,
+    rgba(20, 23, 26, 0.78) 0%,
+    rgba(20, 23, 26, 0) 60%
+  );
+  --scrim-flat: rgba(20, 23, 26, 0.55);
+
+  /* The one decorative glow — CTA panel and page headers only */
+  --glow-chill: radial-gradient(
+    ellipse 60% 80% at 80% 20%,
+    rgba(14, 150, 204, 0.18),
+    transparent 70%
+  );
+}

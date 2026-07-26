@@ -1,0 +1,97 @@
+/* ============================================================
+   Element resets — body, headings, links, focus, selection.
+   ============================================================ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-stack-body);
+  font-size: var(--text-base);
+  line-height: var(--lh-body);
+  color: var(--text-primary);
+  background: var(--surface-page);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  font-family: var(--font-stack-display);
+  font-weight: var(--weight-semibold);
+  line-height: var(--lh-heading);
+  color: var(--text-primary);
+}
+
+h1 { font-size: var(--text-h1); }
+h2 { font-size: var(--text-h2); }
+h3 { font-size: var(--text-h3); }
+h4 { font-size: var(--text-h4); }
+
+p {
+  margin: 0;
+  max-width: var(--measure-body);
+}
+
+a {
+  color: var(--text-link);
+  text-decoration: none;
+  transition: var(--transition-control);
+}
+
+a:hover {
+  color: var(--text-link-hover);
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+  border-color: var(--chill-500);
+}
+
+::selection {
+  background: var(--chill-200);
+  color: var(--ink-900);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

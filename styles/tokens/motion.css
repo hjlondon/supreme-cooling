@@ -1,0 +1,31 @@
+/* ============================================================
+   Motion tokens — restrained and functional. One easing curve.
+   No bounce, no spring, no parallax, no auto-playing carousels.
+   ============================================================ */
+
+:root {
+  --ease-standard: cubic-bezier(0.2, 0.7, 0.3, 1);
+
+  --duration-control: 150ms; /* colour, border, shadow on controls */
+  --duration-lift: 240ms;    /* card lift, accordion panels */
+  --duration-reveal: 600ms;  /* scroll-in section reveal: fade + 12px rise */
+
+  --transition-control: color var(--duration-control) var(--ease-standard),
+    background-color var(--duration-control) var(--ease-standard),
+    border-color var(--duration-control) var(--ease-standard),
+    box-shadow var(--duration-control) var(--ease-standard);
+
+  --transition-lift: transform var(--duration-lift) var(--ease-standard),
+    box-shadow var(--duration-lift) var(--ease-standard),
+    border-color var(--duration-lift) var(--ease-standard);
+
+  --press-scale: 0.985;
+  --hover-lift: -3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --hover-lift: 0px;
+    --press-scale: 1;
+  }
+}

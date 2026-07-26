@@ -1,0 +1,27 @@
+/* ============================================================
+   Spacing tokens — 4px base scale. 24px is the workhorse.
+   ============================================================ */
+
+:root {
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px; /* workhorse: card padding, grid gaps */
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-14: 56px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-26: 104px;
+
+  /* Section rhythm */
+  --section-pad: clamp(56px, 7vw, 104px);
+  --gutter: clamp(20px, 5vw, 48px);
+
+  /* Containers */
+  --container-max: 1200px;
+  --prose-max: 760px;
+}
