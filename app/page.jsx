@@ -70,8 +70,19 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Services */}
+      {/* Testimonials — commercial and residential, side by side */}
       <section className="section section--subtle">
+        <div className="container">
+          <div className="grid-2" style={{ alignItems: 'start' }}>
+            {TESTIMONIALS.map((t) => (
+              <Testimonial key={t.name + t.detail} quote={t.quote} name={t.name} detail={t.detail} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Services */}
+      <section className="section">
         <div className="container">
           <SectionHeading
             eyebrow="Our Services"
@@ -94,7 +105,7 @@ export default function HomePage() {
       </section>
 
       {/* For Your Home — residential path, addressed early and directly */}
-      <section id="home-comfort" className="section">
+      <section id="home-comfort" className="section section--subtle">
         <div className="container grid-2">
           <div>
             <SectionHeading
@@ -114,7 +125,7 @@ export default function HomePage() {
       </section>
 
       {/* Who do we work with */}
-      <section className="section section--subtle">
+      <section className="section">
         <div className="container grid-2">
           <div>
             <SectionHeading
@@ -129,7 +140,7 @@ export default function HomePage() {
       </section>
 
       {/* Why choose us */}
-      <section className="section">
+      <section className="section section--subtle">
         <div className="container">
           <SectionHeading
             eyebrow="Why Choose Us"
@@ -138,17 +149,6 @@ export default function HomePage() {
           <div className="grid-3">
             {FEATURES.map((f) => (
               <FeatureCard key={f.title} icon={f.icon} title={f.title} text={f.text} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials — commercial and residential, side by side */}
-      <section className="section section--subtle">
-        <div className="container">
-          <div className="grid-2" style={{ alignItems: 'start' }}>
-            {TESTIMONIALS.map((t) => (
-              <Testimonial key={t.name + t.detail} quote={t.quote} name={t.name} detail={t.detail} />
             ))}
           </div>
         </div>
