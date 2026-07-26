@@ -120,7 +120,12 @@ export default function HomePage() {
               </Button>
             </div>
           </div>
-          <Media ratio="4x3" label="Home air conditioning photo" />
+          <Media
+            ratio="4x3"
+            src="/assets/Reece2.png"
+            alt="Supreme Cooling Services engineer beside a branded van"
+            label="Home air conditioning photo"
+          />
         </div>
       </section>
 
